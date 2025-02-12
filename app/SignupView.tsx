@@ -51,11 +51,11 @@ const styles = StyleSheet.create({
   inputContainer: { flexDirection: 'row', alignItems: 'center', borderWidth: 1, borderColor: '#ccc', padding: 15, borderRadius: 10, marginTop: 20, width: '100%' },
   input: { flex: 1, marginLeft: 10 },
   icon: { marginRight: 5 },
-  button: { backgroundColor: '#FFA500', padding: 15, borderRadius: 10, marginTop: 60, width: '70%', alignItems: 'center',alignSelf: 'flex-end' },
+  button: { backgroundColor: '#FFA500', padding: 15, borderRadius: 80, marginTop: 10, width: '70%', alignItems: 'center', alignSelf: 'flex-end' },
   buttonText: { color: 'white', fontWeight: 'bold', fontSize: 16 },
-  link: { color: 'gray', marginTop: 100 },
+  link: { color: 'gray', marginTop: 10 },
   highlight: { color: '#FFA500', fontWeight: 'bold' },
-  image: { width: 150, height: 150, marginBottom: 20 }
+  image: { width: 150, height: 150, marginTop: 10,'alignSelf': 'center' }
 });
 
 export default SignupView;

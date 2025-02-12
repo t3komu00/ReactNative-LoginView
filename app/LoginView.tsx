@@ -44,9 +44,9 @@ const styles = StyleSheet.create({
     icon: { marginRight: 5 },
     forgotButton: { alignSelf: 'flex-end', marginTop: 5 },
     forgotText: { color: 'gray' },
-    button: { backgroundColor: '#FFA500', padding: 15, borderRadius: 10, marginTop: 60, width: '70%', alignItems: 'center' ,alignSelf: 'flex-end'},
+    button: { backgroundColor: '#FFA500', padding: 15, borderRadius: 80, marginTop: 20, width: '100%', alignItems: 'center' ,alignSelf: 'flex-end'},
     buttonText: { color: 'white', fontWeight: 'bold', fontSize: 16 ,},
-    link: { color: 'gray', marginTop: 100, alignSelf: 'center', },
+    link: { color: 'gray', marginTop: 10, alignSelf: 'center', },
     highlight: { color: '#FFA500', fontWeight: 'bold' },
     image: { width: 150, height: 150, marginBottom: 20,alignSelf: 'center' }
 });
