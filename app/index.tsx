@@ -10,7 +10,7 @@ const Index = () => {
 
   return (
     // SafeAreaView ensures content is displayed properly within safe screen boundaries
-    <SafeAreaView style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}> //flex: 1 → Takes up the full screen, justifyContent: 'center' → Aligns content vertically, alignItems: 'center' → Aligns content horizontally
+    <SafeAreaView style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}> {/*flex: 1 → Takes up the full screen, justifyContent: 'center' → Aligns content vertically, alignItems: 'center' → Aligns content horizontally*/}
 
         {/* Conditionally render either LoginView or SignupView based on isLogin state */}
       {isLogin ? <LoginView /> : <SignupView />}

@@ -34,7 +34,7 @@ const LoginView = () => {
       </View>
       
       {/* Forgot password button (prints a message when clicked) */}
-      <TouchableOpacity style={styles.forgotButton}  onPress={() => console.log('Forgot password clicked')}> // Placeholder for password recovery functionality
+      <TouchableOpacity style={styles.forgotButton}  onPress={() => console.log('Forgot password clicked')}> {/* Placeholder for password recovery functionality*/}
         <Text style={styles.forgotText}>Forgot?</Text>
       </TouchableOpacity>
       
