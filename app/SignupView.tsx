@@ -3,40 +3,54 @@ import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet,Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
+// Defining the SignupView functional component
 const SignupView = () => {
   return (
+    // Main container for the Signup screen
     <View style={styles.container}>
+        // Displaying an image at the top of the screen
       <Image source={require('../assets/images/LoginImage.jpeg')} style={styles.image} />
+
+        // Back button to navigate to the previous screen
       <TouchableOpacity>
         <Ionicons name="arrow-back" size={24} color="black" style={styles.backIcon} />
       </TouchableOpacity>
+        
+          // Signup title text
       
       <Text style={styles.title}>Create Account</Text>
       
+        // Input field for full name with an icon
       <View style={styles.inputContainer}>
         <Ionicons name="person" size={20} color="gray" style={styles.icon} />
         <TextInput style={styles.input} placeholder="Full Name" />
       </View>
+        
+          // Input field for email with an icon
       
       <View style={styles.inputContainer}>
         <Ionicons name="mail" size={20} color="gray" style={styles.icon} />
         <TextInput style={styles.input} placeholder="Email" keyboardType="email-address" />
       </View>
       
+        // Input field for password with an icon
       <View style={styles.inputContainer}>
         <Ionicons name="lock-closed" size={20} color="gray" style={styles.icon} />
         <TextInput style={styles.input} placeholder="Password" secureTextEntry />
       </View>
       
+        // Input field for confirming password with an icon
       <View style={styles.inputContainer}>
         <Ionicons name="lock-closed" size={20} color="gray" style={styles.icon} />
         <TextInput style={styles.input} placeholder="Confirm Password" secureTextEntry />
       </View>
       
+        // Signup button
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>SIGN UP →</Text>
       </TouchableOpacity>
       
+        // Navigation text for signing in
       <TouchableOpacity>
         <Text style={styles.link}>Already have an account? <Text style={styles.highlight}>Sign in</Text></Text>
       </TouchableOpacity>
@@ -44,6 +58,7 @@ const SignupView = () => {
   );
 };
 
+// Defining styles using StyleSheet
 const styles = StyleSheet.create({
   container: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20 },
   backIcon: { marginBottom: 20, alignSelf: 'flex-start' },
