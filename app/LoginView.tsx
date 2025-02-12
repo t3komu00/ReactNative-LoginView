@@ -11,46 +11,54 @@ import { Ionicons } from '@expo/vector-icons'; // Importing icons from Expo's Io
 
 // Defining the LoginView functional component
 const LoginView = () => {
-  return (
-    // Main container for the Login screen
-    <View style={styles.container}>
-         {/* Displaying an image at the top of the screen */}
-         <Image source={require('../assets/images/LoginImage.jpeg')} style={styles.image} />
-         {/* Login title text */}
-      <Text style={styles.title}>Login</Text>
-       {/* Subtitle text prompting the user */}
-      <Text style={styles.subtitle}>Please sign in to continue.</Text>
-
-      {/* Input field for email with an icon */}
-      <View style={styles.inputContainer}>
-        <Ionicons name="mail" size={20} color="gray" style={styles.icon} />
-        <TextInput style={styles.input} placeholder="Email" keyboardType="email-address" />
+    return (
+      // Main container for the Login screen
+      <View style={styles.container}>
+           {/* Displaying an image at the top of the screen */}
+           <Image source={require('../assets/images/LoginImage.jpeg')} style={styles.image} />
+           
+           {/* Login title text */}
+           <View>
+              <Text style={styles.title}>Login</Text>
+           </View>
+  
+           {/* Subtitle text prompting the user */}
+           <View>
+              <Text style={styles.subtitle}>Please sign in to continue.</Text>
+           </View>
+  
+           {/* Input field for email with an icon */}
+           <View style={styles.inputContainer}>
+              <Ionicons name="mail" size={20} color="gray" style={styles.icon} />
+              <TextInput style={styles.input} placeholder="Email" keyboardType="email-address" />
+           </View>
+        
+           {/* Input field for password with an icon */}
+           <View style={styles.inputContainer}>
+              <Ionicons name="lock-closed" size={20} color="gray" style={styles.icon} />
+              <TextInput style={styles.input} placeholder="Password" secureTextEntry />
+           </View>
+        
+           {/* Forgot password button (prints a message when clicked) */}
+           <TouchableOpacity style={styles.forgotButton} onPress={() => console.log('Forgot password clicked')}>
+              <Text style={styles.forgotText}>Forgot?</Text>
+           </TouchableOpacity>
+  
+           {/* Login button */}
+           <TouchableOpacity style={styles.button}>
+              <Text style={styles.buttonText}>LOGIN →</Text>
+           </TouchableOpacity>
+  
+           {/* Navigation text for signing up */}
+           <TouchableOpacity>
+              <Text style={styles.link}>
+                 Don't have an account? <Text style={styles.highlight}>Sign up</Text>
+              </Text>
+           </TouchableOpacity>
       </View>
-      
-        {/* Input field for password with an icon */}
-      <View style={styles.inputContainer}>
-        <Ionicons name="lock-closed" size={20} color="gray" style={styles.icon} />
-        <TextInput style={styles.input} placeholder="Password" secureTextEntry />
-      </View>
-      
-      {/* Forgot password button (prints a message when clicked) */}
-      <TouchableOpacity style={styles.forgotButton}  onPress={() => console.log('Forgot password clicked')}> {/* Placeholder for password recovery functionality*/}
-        <Text style={styles.forgotText}>Forgot?</Text>
-      </TouchableOpacity>
-      
-       {/* Login button */}
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>LOGIN →</Text>
-      </TouchableOpacity>
-      
-      {/* Navigation text for signing up */}
-      <TouchableOpacity>
-        <Text style={styles.link}>Don't have an account? <Text style={styles.highlight}>Sign up</Text></Text>
-      </TouchableOpacity>
-    </View>
-  );
-};
-
+    );
+  };
+  
 // Defining styles using StyleSheet
 const styles = StyleSheet.create({
     container: { flex: 1, padding: 20 },// Makes the container take up the full screen width and adds padding
